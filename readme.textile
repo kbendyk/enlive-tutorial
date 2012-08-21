@@ -15,11 +15,9 @@ h2. HTML Templating
 There are two real camps in HTML templating. The first which almost everyone is familiar with is the PHP style template:
 
 <pre>
-<?php
-for($i = 0; $i < $len; $i++) {
-?><p>Foo <?echo $i?></p><?
-}
-?>
+<?php foreach ($foo as $i): ?>
+<p>Foo: <?=$i?> </p>
+<?php endforeach; ?>
 </pre>
 
 This is of course enough to drive anyone insane and some templating solutions like the one in Django have made marginal improvements:
